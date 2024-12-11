@@ -11,7 +11,7 @@ const port = process.env.PORT || 3001
 app.use(
     cors({
       origin: "https://client-eight-rose.vercel.app",
-      methods: ["GET", "POST", "DELETE", "PUT"],
+      methods: ["GET", "POST", "DELETE", "PUT","PATCH"],
       allowedHeaders: [
         "Content-Type",
         "Authorization",
