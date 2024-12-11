@@ -10,7 +10,7 @@ const app = express()
 const port = process.env.PORT || 3001
 app.use(
     cors({
-      origin: "http://client-eight-rose.vercel.app",
+      origin: "https://client-eight-rose.vercel.app",
       methods: ["GET", "POST", "DELETE", "PUT"],
       allowedHeaders: [
         "Content-Type",
