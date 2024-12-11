@@ -8,7 +8,20 @@ dotenv.config()
 
 const app = express()
 const port = process.env.PORT || 3001
-app.use(cors())
+app.use(
+    cors({
+      origin: "http://client-eight-rose.vercel.app",
+      methods: ["GET", "POST", "DELETE", "PUT"],
+      allowedHeaders: [
+        "Content-Type",
+        "Authorization",
+        "Cache-Control",
+        "Expires",
+        "Pragma",
+      ],
+      credentials: true,
+    })
+  );
 app.use(bodyParser.json())
 routes(app);
 
